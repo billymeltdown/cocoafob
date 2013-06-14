@@ -178,6 +178,9 @@
 	// Verify DSA signature.
 	int check = DSA_verify(0, [digest bytes], (int)[digest length], sig, (int)sigSize, self.dsa);
 	BOOL result = check > 0;
+    
+    // set the error pointer to nil
+    *err = nil;
 
 	// Cleanup
 	free(sig);
