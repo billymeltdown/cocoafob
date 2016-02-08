@@ -3,4 +3,6 @@ build
 *.pbxuser
 *.perspectivev3
 .idea
-.DS_Store
+xcuserdata
+*.xccheckout
+*.xcscmblueprint
