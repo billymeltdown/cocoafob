@@ -14,5 +14,5 @@
 void CFobAssignErrorWithDescriptionAndCode(NSError **err, NSString *description, NSInteger code)
 {
 	if (err != NULL)
-		*err = [NSError errorWithDomain:[[NSBundle bundleForClass:[CFobLicVerifier class]] bundleIdentifier] code:code userInfo:[NSDictionary dictionaryWithObject:NSLocalizedStringFromTableInBundle(description, nil, [NSBundle bundleForClass:[CFobLicVerifier class]], nil) forKey:NSLocalizedDescriptionKey]];
+		*err = [NSError errorWithDomain:[[NSBundle bundleForClass:[CFobLicVerifier class]] bundleIdentifier] code:code userInfo:[NSDictionary dictionaryWithObject:[[NSBundle bundleForClass:[CFobLicVerifier class]] localizedStringForKey:description value:@"" table:nil] forKey:NSLocalizedDescriptionKey]];
 }
