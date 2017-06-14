@@ -67,7 +67,13 @@
 	self.blacklist = nil;
 	[super dealloc];
 }
+#else
+- (void)dealloc
+{
+    CFRelease(_publicKey);
+}
 #endif
+
 
 #pragma mark -
 #pragma mark API
